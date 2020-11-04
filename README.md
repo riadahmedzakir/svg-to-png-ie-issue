@@ -1,27 +1,7 @@
-# SVGToPNG
+# SVG To PNG 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+The requirement was to get a jpg/png file from a svg that was generated on a html via a third party Chart package(ngx-chart).
+The idea was to draw svg on a html5 canvas and convert that canvas back to png using canvas.toDataUrl() which is supported by all modern browser even in IE starting from version 9. But the issue arises when drawing a svg on a canvas. Drawing svg on canvas taints the canvas thus making it read-only. Any read quest then results in a CORS. So IE blocks it as a security issue.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Fabric canvas was able to handle the case but the rendered image is broken in chrome. So both was handled differently. 
+Also blob are FILE with less properties. Giving a blob required properties will make it behave has a file.
