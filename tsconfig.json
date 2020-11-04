@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "baseUrl": "./",
+    // "paths": {
+    //   "@ecap3/*": [
+    //     "../node_modules/*"
+    //   ]
+    // },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "noStrictGenericChecks": true
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false
+  }
+}

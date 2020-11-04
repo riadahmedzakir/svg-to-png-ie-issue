@@ -1,0 +1,24 @@
+<div id="hiddenChart">
+  <div style="width: 500px; height: 500px;">
+    <ngx-charts-pie-chart [animations]="false" [scheme]="ManagementChartConfig.schemeCanceled" [results]="data"
+      [gradient]="ManagementChartConfig.gradient" [legend]="false" [labels]="true" [doughnut]="false"
+      [arcWidth]="ManagementChartConfig.arcWidth" [trimLabels]="false">
+    </ngx-charts-pie-chart>
+  </div>
+
+  <div style="width: 500px; height: 500px;">
+    <ngx-charts-pie-chart [animations]="false" [scheme]="ManagementChartConfig.schemeCompleted" [results]="data"
+      [gradient]="ManagementChartConfig.gradient" [legend]="false" [labels]="true" [doughnut]="false"
+      [arcWidth]="ManagementChartConfig.arcWidth" [trimLabels]="false">
+    </ngx-charts-pie-chart>
+  </div>
+
+</div>
+
+<canvas></canvas>
+
+<canvas></canvas>
+
+<img src="" alt="">
+
+<img src="" alt="">
